@@ -1,0 +1,12 @@
+{% extends "front/base.html.twig" %}
+
+{% block main %}
+
+	{% for car in cars %}
+		{% if car.published %}
+			<h2>
+				<a href="{{ path('car_show', {'id' : car.id}) }}">{{ car.title }}</a>
+			</h2>
+		{% endif %}
+	{% endfor %}
+{% endblock %}

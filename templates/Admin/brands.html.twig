@@ -1,0 +1,13 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+	{% for brand in brand %}
+		<h2>
+			<a href="{{ path("admin_brand_show", {'id' : brand.id } ) }}">{{brand.name}}
+				{{ brand.countrie }}</a>
+		</h2>
+
+	{% endfor %}
+
+{% endblock %}

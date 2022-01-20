@@ -1,0 +1,16 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+	{% for groupe in groupes %}
+
+		<h2>
+			<a href="{{ path('admin_groupe_show', {'id' : groupe.id }) }}">{{ groupe.name }}
+			</a>
+		</h2>
+
+
+	{% endfor %}
+
+
+{% endblock %}
